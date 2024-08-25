@@ -44,7 +44,17 @@
     // export const SongSchema = SchemaFactory.createForClass(Song)
 
 
-// اینزرت کردن دیتا
+
+// برای ساختار اطلاعات هم یه dto میخوایم 
+    // export class CreateSongDTO {
+    //     title: string;
+    //     releasedDate: Date;
+    //     duration: Date;
+    //     lyrics: string;
+    // }
+
+
+
 
     // ماژول برای اتصال به تیبل مربوطه
         // @Module({
@@ -53,8 +63,12 @@
         //     providers: [SongsService]
         // })
         // export class SongsModule {}
-      
 
+
+
+
+
+// اینزرت کردن دیتا
     // کنترلر
         // @Controller('songs')
         // export class SongsController {
@@ -87,10 +101,35 @@
         // }
 
 
-// برای ساختار اطلاعات هم یه dto میخوایم 
-    // export class CreateSongDTO {
-    //     title: string;
-    //     releasedDate: Date;
-    //     duration: Date;
-    //     lyrics: string;
-    // }
+
+
+// findAll
+    // کنترلر
+        // @Get()
+        // find():Promise<Song[]> {
+        //     return this.songService.find()
+        // }
+
+    //  سرویس
+        // async find() {
+        //     return this.songModule.find()
+        // }
+
+
+
+
+// findById
+    // کنترلر
+        // @Get(":id")
+        // findById(
+        //     @Param("id") // برای دی استراکچر کردن id
+        //     id: string
+        // ):Promise<Song> {
+        //     console.log(id);
+        //     return this.songService.findById(id)
+        // }
+
+    //  سرویس
+        // async findById(id: string) {
+        //     return this.songModule.findById(id)
+        // }

@@ -15,4 +15,16 @@ export class SongsService {
         const song = await this.songModule.create(createSongDTO)
         return song
     }
+
+    async find(): Promise<Song[]> {
+        return this.songModule.find()
+    }
+
+    async findById(id: string): Promise<Song> {
+        return this.songModule.findById(id)
+    }
+
+    async delete(id: string) {
+        return this.songModule.deleteOne({ _id: id })
+    }
 }
